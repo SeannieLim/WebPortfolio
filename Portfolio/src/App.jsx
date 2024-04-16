@@ -1,10 +1,14 @@
 import React from "react";
-
+import Navbar from "./Components/Navbar.jsx";
+import Home from './Components/Home.jsx';
+import About from "./Components/About.jsx";
 function App(){
   return(
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <>
+    <Navbar/>
+    <Home/>
+    <About/>
+  </>
   )
 }
 
