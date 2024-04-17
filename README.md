@@ -33,3 +33,6 @@ export default {
 4) Run your build process
 
     `npm run dev`
+
+5) Add react Routing
+    `npm install reac-router-dom`

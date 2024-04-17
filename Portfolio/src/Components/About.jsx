@@ -1,7 +1,10 @@
 import React from 'react'
+import Navbar from '../Components/Navbar.jsx'
 
 const About = () => {
   return (
+    <>
+    <Navbar/>
     <div name='about' className='w-full h-screen bg-[#0a192f] text-gray-300'>
         <div className="flex flex-col justify-center items-center w-full h-full">
             <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
@@ -20,6 +23,7 @@ const About = () => {
             </div>
         </div>
     </div>
+    </>
   )
 }
 

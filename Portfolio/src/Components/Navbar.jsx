@@ -3,7 +3,7 @@ import {FaBars,FaTimes, FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import logo from '../assets/Logo.jpg'
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
@@ -15,13 +15,14 @@ const Navbar = () => {
             <img src={logo} alt="Logo Image" style={{width: '50px'}} />
         </div>
         {/* Menu */}
+        <nav>
             <ul className="hidden md:flex"> 
-                <li>Home</li>
-                <li>About</li>
-                <li>Resume</li>
-                <li>Portfolio</li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/work">Resume</Link></li>
+                <li><Link to="/portfolio">Portfolio</Link></li>
             </ul>
-
+        </nav>
         {/* Hamburger Menu */}
         <div onClick={handleClick} className="md:hidden z-10">
             {!nav ? <FaBars/> : <FaTimes/>}
