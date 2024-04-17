@@ -1,6 +1,7 @@
 import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import Navbar from '../Components/Navbar.jsx'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -14,11 +15,13 @@ const Home = () => {
             <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a Full Time Student.</h2>
             <p className="text-[#8892b0] text-xl py-4 max-w-[700px]">I'm a full time student specializing in eating sleeping and mugging and occasionally designing and developing cool stuff. Currently, I'm focused on building responsive web and mobile application.</p>
             <div>
-                <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-green-600 hover:border-green-600">View Work
+              <Link to="/work">
+                <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-green-600 hover:border-green-600">View Resume
                 <span className='group-hover:rotate-90 duration-300'>
                 <HiArrowNarrowRight className="ml-3"/> 
                 </span>
                 </button>
+                </Link>
             </div>
         </div>
 
