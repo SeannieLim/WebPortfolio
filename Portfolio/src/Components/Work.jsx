@@ -27,7 +27,7 @@ const Work = () => {
         wrapper="p"
       />
         <div className="mx-auto inline-flex ">
-              <Link to="resume" smooth={true} duration={500}>
+              <Link to="resume" smooth={true} duration={500} offset={-100}>
                 <button className="text-white group border-2 px-6 py-3 my-2 flex items-center mr-4 hover:bg-green-600 hover:border-green-600">View Resume
                 <span className='group-hover:rotate-90 duration-300'>
                 <HiArrowNarrowRight className="ml-3"/> 

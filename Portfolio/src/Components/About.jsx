@@ -1,6 +1,9 @@
 import React from 'react'
 import Navbar from '../Components/Navbar.jsx'
-
+import {
+  Carousel
+  } from "@material-tailwind/react";
+  
 const About = () => {
   return (
     <>
@@ -21,6 +24,9 @@ const About = () => {
                     <p>I'm passionate about building things and drinking good coffee. I love everything related to software and would be thrilled to learn about all the different types of frameworks that can be used to create awesome applications</p>
                 </div>
             </div>
+
+        
+           
         </div>
     </div>
     </>
