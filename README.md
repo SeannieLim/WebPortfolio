@@ -36,3 +36,7 @@ export default {
 
 5) Add react Routing
     `npm install reac-router-dom`
+
+
+6) Smooth-Scrolling
+    `npm i smooth-scroll`
