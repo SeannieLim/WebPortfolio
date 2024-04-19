@@ -3,13 +3,6 @@ import Navbar from './Navbar'
 import Skills from "./Skills"
 import Typical from 'react-typical'
 
-import HTML from '../assets/html.png'
-import CSS from '../assets/css.png'
-import Javascript from '../assets/javascript.png'
-import Node from '../assets/node.png'
-import ReactJs from '../assets/react.png'
-import Tailwind from '../assets/tailwind.png'
-import Github from '../assets/github.png'
 
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import { Link } from 'react-scroll';

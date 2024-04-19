@@ -1,8 +1,5 @@
 import React from 'react'
 import Navbar from '../Components/Navbar.jsx'
-import {
-  Carousel
-  } from "@material-tailwind/react";
   
 const About = () => {
   return (
