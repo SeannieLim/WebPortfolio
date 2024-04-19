@@ -5,15 +5,19 @@ const Portfolio = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [videos, setVideos] = useState([]);
 
+  //Event Handler (OnChange) : Will pass this to setSearchQuery -> Update searchQuery to be pass to url
   const handleChange = (event) => {
     setSearchQuery(event.target.value);
   };
 
+
+  //On submit request
   const handleSubmit = (event) => {
     event.preventDefault();
 
     const url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyDRT5o12YIZbZa-u51TrFjKYidOqnmvg2w&q=${searchQuery}&part=snippet&type=video`;
 
+    //Fetching data from Youtube Api
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -22,6 +26,7 @@ const Portfolio = () => {
         return response.json();
       })
       .then((data) => {
+        //Pass to useState(setVideos)
         setVideos(data.items);
       })
       .catch((error) => {
@@ -49,6 +54,8 @@ const Portfolio = () => {
               Search
             </button>
           </form>
+
+          {/* Using Mapping to map out the info needed from */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {videos.map((video) => (
               <div key={video.id.videoId} className="bg-white rounded p-4 shadow">
