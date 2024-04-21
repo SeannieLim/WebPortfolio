@@ -21,6 +21,7 @@ const Navbar = () => {
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/work">Resume</Link></li>
                 <li><Link to="/portfolio">Portfolio</Link></li>
+                <li><Link to="/SomeApi">SomeAPI</Link></li>
             </ul>
         </nav>
         {/* Hamburger Menu */}
