@@ -1,48 +1,61 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const SomeApi = () => {
-    //UseState (Updating initial state with setState)
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true); //Indicate that API is being fetch
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    //
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
     useEffect(() => {
-        const fetchApiData = async () =>{
-            try{
-                const response = await fetch('https://api.github.com/repos/SeannieLim/WebPortfolio/commits');
-                if(!response.ok){
+        const fetchApiData = async () => {
+            try {
+                const response = await fetch(`https://api.github.com/users/SeannieLim/repos`);
+
+                if (!response.ok) {
                     throw new Error(`HTTP error, status ${response.status}`);
                 }
-                let postsData = await response.json();
-                setData(postsData);
-                console.log(data);
+
+                const reposData = await response.json();
+                setData(reposData);
                 setError(null);
-            } catch (err){
+            } catch (err) {
                 setError(err.message);
-                setData(null);
-            }finally{
-                setLoading(false); //Can't fetech API 
+                setData([]);
+            } finally {
+                setLoading(false);
             }
-        }
-        //Call function for execution
+        };
+
         fetchApiData();
-    },[]); //Effect runs once, if the dependancies haven'ts changed since last render, the effect won't run again
+    }, [searchTerm]);
 
+    return (
+        <>
+            <Navbar />
+            <div name='about' className='w-full h-screen bg-[#0a192f] text-gray-300'>
+                <div className="flex flex-col justify-center items-center w-full h-full">
+                    <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
+                        {data.map((repo, index) => (
+                            <div key={index} className="bg-gray-800 p-4 rounded-lg">
+                                <h2 className="text-xl font-semibold">{repo.name}</h2>
+                                <p className="text-sm text-gray-400">{repo.description}</p>
+                                <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                                    {repo.html_url}
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <Footer/>
+        </>
+    );
+};
 
-  //Learning about mapping (Changing to object before accessing the data )
-  function displayData(){
-    data.map((object) => {
-        console.log(object.commit.message);
-       })
-  } 
-
-    displayData();
-
-  return (
-    <>
-    <p>Hello</p>
-    </>
-  )
-}
-
-export default SomeApi
+export default SomeApi;
