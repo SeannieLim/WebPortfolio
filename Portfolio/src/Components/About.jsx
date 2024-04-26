@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar.jsx'
+import Footer from './Footer.jsx'
   
 const About = () => {
   return (
@@ -26,6 +27,7 @@ const About = () => {
            
         </div>
     </div>
+    <Footer/>
     </>
   )
 }

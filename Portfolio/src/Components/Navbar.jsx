@@ -20,8 +20,7 @@ const Navbar = () => {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/work">Resume</Link></li>
-                <li><Link to="/portfolio">Portfolio</Link></li>
-                <li><Link to="/SomeApi">SomeAPI</Link></li>
+                <li><Link to="/Playground">Playground</Link></li>
             </ul>
         </nav>
         {/* Hamburger Menu */}
@@ -48,7 +47,7 @@ const Navbar = () => {
                     
                 </li>
                 <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
-                    <a className='flex justify-between items-center w-full text-gray-300' href="/">
+                    <a className='flex justify-between items-center w-full text-gray-300' href="https://github.com/SeannieLim">
                         Github <FaGithub size={30} />
                     </a>
                 </li>

@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Skills from "./Skills"
 import Typical from 'react-typical'
-
+import Footer from './Footer'
 
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import { Link } from 'react-scroll';
@@ -85,11 +85,13 @@ const Work = () => {
           </div>
         </div>
         <Skills/>
-</div>
     
 </div>
+    <Footer/>
+</div>
     </div>
     </div>
+    
     </>
   )
 }
