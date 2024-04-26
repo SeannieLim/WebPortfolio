@@ -19,8 +19,7 @@ const Playground = () => {
     const navigate = useNavigate();
 
     const ytKey = import.meta.env.VITE_YOUTUBE_KEY;
-    const owner = import.meta.env.VITE_OWNER
-
+    const owner = import.meta.env.VITE_OWNER;
 
     const goToNewPage = (repoName) => {
         navigate(`/GitHubP2/${repoName}`);
@@ -47,7 +46,7 @@ const Playground = () => {
         };
 
         fetchApiData();
-    }, [searchQuery]);
+    }, [searchQuery, owner, ytKey]);
 
     const handleTabClick = (tabId) => {
         setActiveTab(tabId);
@@ -102,7 +101,7 @@ const Playground = () => {
                             />
                             <button
                                 type="button"
-                                onClick={() => setSearchQuery(searchQuery)}
+                                onClick={() => fetchApiData()} // Trigger search when button is clicked
                                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                             >
                                 Search
@@ -125,6 +124,14 @@ const Playground = () => {
                                         <Typography className="text-xl font-semibold text-black">
                                             {video.snippet.title}
                                         </Typography>
+                                        <div className="flex justify-end mt-4">
+                                            <Button
+                                                color="blue"
+                                                onClick={() => window.open(`https://www.youtube.com/watch?v=${video.id.videoId}`, '_blank')}
+                                            >
+                                                Watch Video
+                                            </Button>
+                                        </div>
                                     </CardBody>
                                 </Card>
                             ))}

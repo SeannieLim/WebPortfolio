@@ -22,6 +22,7 @@ const GitHubP2 = () => {
   useEffect(() => {
     const fetchApiData = async () => {
       try {
+        //Fetch GitAPI
         const urls = [
           `https://api.github.com/repos/${owner}/${repoName}/commits`,
           `https://api.github.com/repos/${owner}/${repoName}`
