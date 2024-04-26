@@ -38,6 +38,22 @@ The portfolio integrates with YouTube API and GitHub API to display dynamic cont
   - Display the number of commits on the master branch for each repository.
   - Links to GitHub repositories for detailed exploration.
 
+  ## Application Architecture
+
+The web portfolio is built using a modern and scalable architecture to ensure performance, maintainability, and extensibility. Below is an overview of the application's architecture:
+
+### Frontend
+
+- **Framework**: The frontend is developed using a combination of HTML5, CSS3, and JavaScript.
+- **Responsive Design**: The portfolio is designed with a mobile-first approach, ensuring optimal viewing experience across various devices and screen sizes.
+- **API Integration**: Utilizes the YouTube API and GitHub API to fetch and display dynamic content such as videos and repositories.
+  
+### Data Flow
+
+1. **User Interaction**: Users interact with the frontend UI to browse through different sections like Home, About Me, Resume, and integrations with YouTube and GitHub.
+2. **API Calls**: When required, the frontend makes API calls to fetch data from the YouTube API and GitHub API.
+3. **Data Display**: The fetched data is then displayed dynamically on the respective sections of the portfolio.
+
 ## Technologies Used
 
 - HTML5
@@ -107,3 +123,16 @@ export default {
 
 6) Smooth-Scrolling
     `npm i smooth-scroll`
+
+## Reporting Issues
+
+If you encounter any issues, bugs, or have suggestions for improvements, please feel free to report them. To report an issue:
+
+1. Navigate to the [Issues](https://github.com/YourUsername/YourRepositoryName/issues) section of this repository.
+2. Click on the `New Issue` button.
+3. Provide a descriptive title and detailed description of the issue or suggestion.
+4. Include screenshots, error messages, or any other relevant information that can help in understanding and reproducing the issue.
+5. Assign appropriate labels and milestones if available.
+6. Click on `Submit new issue`.
+
+Your feedback is valuable, and it helps in enhancing the quality of this web portfolio. Thank you for taking the time to report issues and contribute to the improvement of this project!
