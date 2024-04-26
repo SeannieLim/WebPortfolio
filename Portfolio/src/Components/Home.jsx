@@ -20,7 +20,7 @@ const Home = () => {
               <p className="text-[#8892b0] text-xl py-4 max-w-[700px]">I'm a full time student specializing, occasionally designing and developing cool stuff. Currently, I'm focused on building responsive web and mobile application.</p>
             </div>
             {/* Profile Image */}
-            <img src={profileImage} alt="Sean Lim" className="rounded-full w-1/2 h-80 ml-4 object-cover ml-20 hover:scale-125 transition-transform duration-700 shadow-md hover:shadow-lg" />
+            <img src={profileImage} alt="Sean Lim" className="rounded-full w-1/2 h-80 ml-10 object-cover ml-20 hover:scale-125 transition-transform duration-700 shadow-md hover:shadow-lg" />
           </div>
           <div>
             <Link to="/work">
