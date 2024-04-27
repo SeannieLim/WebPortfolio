@@ -4,7 +4,7 @@
 
 This web portfolio serves as a showcase of my skills, projects, and experiences as a web developer. It is designed to provide visitors with an overview of my work and abilities in the field of web development.
 
-The portfolio integrates with YouTube API and GitHub API to display dynamic content such as my latest YouTube videos and GitHub repositories.
+The portfolio integrates with YouTube API and GitHub API to display dynamic content such as my favourite athlete YouTube videos and GitHub repositories.
 
 ## Features
 
