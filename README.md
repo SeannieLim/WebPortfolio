@@ -26,8 +26,8 @@ The portfolio integrates with YouTube API and GitHub API to display dynamic cont
 
 - **Description**: Display and search functionality for my YouTube videos directly on the portfolio.
 - **Features**:
-  - Display my latest YouTube videos.
-  - Search for specific videos within my channel.
+  - Display favourite athelete's youTube videos.
+  - Search for specific videos within that channel
   - Thumbnails, titles, and descriptions for each video.
 
 ### GitHub API Integration
